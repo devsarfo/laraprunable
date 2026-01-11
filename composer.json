@@ -1,0 +1,41 @@
+{
+  "name": "devsarfo/laraprunable",
+  "description": "Laravel Prunable Package that supports SoftDeletes trait",
+  "keywords": [
+    "laravel",
+    "prunable",
+    "laraprunable"
+  ],
+  "homepage": "https://github.com/devsarfo/laraprunable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bernard Sarfo Twumasi",
+      "email": "devsarfo@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "illuminate/console": "^8.0|^9.0|^10.0|^11.0||^12.0",
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0||^12.0",
+    "illuminate/database": "^8.0|^9.0|^10.0|^11.0||^12.0",
+    "illuminate/events": "^8.0|^9.0|^10.0|^11.0||^12.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.27"
+  },
+  "autoload": {
+    "psr-4": {
+      "DevSarfo\\LaraPrunable\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DevSarfo\\LaraPrunable\\Providers\\PrunableProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
