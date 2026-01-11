@@ -34,10 +34,10 @@ class PruneCommand extends \Illuminate\Database\Console\PruneCommand
                 $namespace = $this->laravel->getNamespace();
 
                 return $namespace.str_replace(
-                        ['/', '.php'],
-                        ['\\', ''],
-                        Str::after($model->getRealPath(), realpath(app_path()).DIRECTORY_SEPARATOR)
-                    );
+                    ['/', '.php'],
+                    ['\\', ''],
+                    Str::after($model->getRealPath(), realpath(app_path()).DIRECTORY_SEPARATOR)
+                );
             })
             ->when(! empty($except), fn ($models) => $models->reject(fn ($model) => in_array($model, $except)))
             ->filter(fn ($model) => $this->isPrunable($model))
