@@ -14,7 +14,7 @@ class PrunableProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->extend(\Illuminate\Database\Console\PruneCommand::class, fn () => new PruneCommand());
+        $this->app->extend(\Illuminate\Database\Console\PruneCommand::class, fn () => new PruneCommand);
     }
 
     /**
